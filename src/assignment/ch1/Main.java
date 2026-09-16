@@ -12,11 +12,6 @@ public class Main {
 
             System.out.print("두 번째 숫자를 입력하세요: ");
             int num2 = scanner.nextInt();
-            if (num1 <= 0 || num2 <= 0) {
-                System.out.println("양의 정수만 입력해주세요! 처음부터 다시 시작합니다.");
-                System.out.println();
-                continue;
-            }
 
             System.out.print("사칙연산 기호를 입력하세요 : ");
             String operator = scanner.next();
@@ -32,8 +27,14 @@ public class Main {
                     System.out.println("결과: " + (num1 * num2));
                     break;
                 case "/":
-                    System.out.println("결과: " + (num1 / num2));
-                    break;
+                    if(num2 !=0) {
+                        System.out.println("결과: " + (num1 / num2));
+                        break;
+                    }
+                    else {
+                        System.out.println("양의 정수만 입력 받을 수 있습니다 처음으로 돌아갑니다. ");
+                        continue;
+                    }
                 default:
                     System.out.println("잘못된 연산자 기호입니다. 다시 입력해주세요");
                     break;
@@ -49,7 +50,8 @@ public class Main {
                 System.out.println();
             }
             else {
-                System.out.println("잘못된 입력 값습니다. 처음으로 돌아갑니다");
+                System.out.println("잘못된 입력값입니다, 강제 종료합니다.");
+                break;
             }
         }
         scanner.close();
