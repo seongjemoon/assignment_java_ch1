@@ -42,10 +42,12 @@ public class Calculator {
     }
 
     public List<Double> getResults() {
+
         return results;
     }
 
     public void setResults(List<Double> results) {
+
         this.results = results;
     }
 }
