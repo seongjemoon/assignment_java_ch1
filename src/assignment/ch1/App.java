@@ -1,6 +1,4 @@
-package assignment.ch2;
-
-import assignment.ch1.Calculator;
+package assignment.ch1;
 
 import java.util.InputMismatchException;
 import java.util.List;
